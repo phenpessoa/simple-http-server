@@ -1,0 +1,17 @@
+[Unit]
+Description=Simple HTTP Server
+
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=exec
+User=root
+WorkingDirectory=/root
+ExecStart=/root/simple-http-server
+
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
