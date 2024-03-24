@@ -7,7 +7,7 @@ import (
 
 func main() {
 	http.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintln(w, "hello, world")
+		fmt.Fprintln(w, "hello, github")
 	})
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		panic(err)
