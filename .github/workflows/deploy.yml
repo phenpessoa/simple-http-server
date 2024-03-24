@@ -23,4 +23,6 @@ jobs:
           ssh-host: ${{ secrets.HOSTINGER_REMOTE_SERVER_IP }}
 
       - name: Deploy
+        env:
+          HOSTINGER_REMOTE_SERVER_IP: ${{ secrets.HOSTINGER_REMOTE_SERVER_IP }}
         run: make deploy
